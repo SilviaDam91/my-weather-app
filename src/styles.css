@@ -65,12 +65,6 @@ body {
   opacity: 1;
 }
 
-#gitLink {
-  margin-top: 10px;
-  position: relative;
-  left: 81%;
-}
-
 .current-temperature {
   padding: 10px;
 }

@@ -1,0 +1,140 @@
+h1 {
+  color: red;
+}
+body {
+  background: linear-gradient(
+    180.3deg,
+    rgb(214, 224, 255) 37.2%,
+    rgb(254, 168, 168) 137.3%
+  );
+  font-family: "Original Surfer", cursive;
+  margin: 0% 0% 20% 0;
+}
+
+footer {
+  text-align: right;
+}
+
+#now-temperature {
+  font-size: 60px;
+}
+#celsius {
+  color: #212529;
+  font-size: 22px;
+  padding-left: 6px;
+  vertical-align: top;
+  font-size: 16px;
+  line-height: 59px;
+}
+
+#fahrenheit {
+  color: #212529;
+  font-size: 22px;
+  padding-left: 6px;
+  vertical-align: top;
+  font-size: 16px;
+  line-height: 59px;
+}
+
+#temperature-bar {
+  line-height: 59px;
+  vertical-align: top;
+}
+
+#search-currentPositionWeather {
+  border-radius: 10px;
+  border: 2px #113a5d;
+  box-shadow: 1px 1px 1px #a5a3a3;
+  padding: 3px;
+  margin: 4px auto;
+}
+
+#reset {
+  border-radius: 10px;
+  border: 2px #113a5d;
+  box-shadow: 1px 1px 1px #a5a3a3;
+  padding: 3px;
+  margin: 4px auto;
+}
+
+#reset:hover {
+  background-color: #add1fc;
+  transition: all 200ms ease-in out;
+  opacity: 1;
+}
+
+#search-currentPositionWeather:hover {
+  background-color: #add1fc;
+  transition: all 200ms ease-in out;
+  opacity: 1;
+}
+
+.current-temperature {
+  padding: 10px;
+}
+
+.city {
+  font-size: 20px;
+}
+
+.search_header {
+  text-align: center;
+  margin: 5px 0px 23px 0px;
+}
+.currentWeather {
+  text-align: center;
+  font-weight: 900;
+  padding: 42px 26px;
+}
+
+.search_buttom {
+  border-radius: 10px;
+  border: 2px #113a5d;
+  box-shadow: 1px 1px 1px #a5a3a3;
+  padding: 3px;
+  margin: 4px auto;
+}
+
+.search_buttom:hover {
+  background-color: #add1fc;
+  transition: all 200ms ease-in out;
+  opacity: 1;
+}
+
+.today_temperature {
+  border: 2px solid#113A5D;
+  border-radius: 30px;
+  font-weight: 900;
+  box-shadow: 1px 1px 1px #a5a3a3;
+  margin-bottom: 30px;
+  text-align: center;
+  font-size-adjust: none;
+}
+.table td,
+.table th {
+  padding: 5px;
+}
+
+.forecast tbody th {
+  text-align: center;
+}
+
+.clock {
+  display: block;
+  margin: 0 auto;
+}
+.forecast {
+  border: 2px solid#113A5D;
+  border-radius: 30px;
+  margin-top: 5%;
+  box-shadow: 1px 1px 1px #a5a3a3;
+  margin-bottom: 25px;
+}
+
+.max_temperature {
+  color: #cf3a3a;
+  font-weight: 900;
+}
+.min_temperature {
+  font-weight: 900;
+}

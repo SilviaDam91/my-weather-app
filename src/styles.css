@@ -8,10 +8,7 @@ body {
     rgb(254, 168, 168) 137.3%
   );
   font-family: "Original Surfer", cursive;
-}
-
-a {
-  text-align: right;
+  margin-bottom: 10%;
 }
 
 #now-temperature {
@@ -66,6 +63,12 @@ a {
   background-color: #add1fc;
   transition: all 200ms ease-in out;
   opacity: 1;
+}
+
+#gitLink {
+  margin-top: 10px;
+  position: relative;
+  left: 81%;
 }
 
 .current-temperature {

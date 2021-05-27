@@ -1,15 +1,6 @@
 h1 {
   color: red;
 }
-body {
-  background: linear-gradient(
-    180.3deg,
-    rgb(214, 224, 255) 37.2%,
-    rgb(254, 168, 168) 137.3%
-  );
-  font-family: "Original Surfer", cursive;
-  margin-bottom: 10%;
-}
 
 #now-temperature {
   font-size: 60px;
@@ -63,6 +54,19 @@ body {
   background-color: #add1fc;
   transition: all 200ms ease-in out;
   opacity: 1;
+}
+
+.weatherContainer {
+  max-width: 600px;
+  margin: 30px auto;
+  padding: 20px;
+  margin-bottom: 10%;
+  background: linear-gradient(
+    180.3deg,
+    rgb(214, 224, 255) 37.2%,
+    rgb(254, 168, 168) 137.3%
+  );
+  font-family: "Original Surfer", cursive;
 }
 
 .current-temperature {

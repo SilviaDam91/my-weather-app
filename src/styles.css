@@ -84,6 +84,7 @@ li {
 
 .city {
   font-size: 20px;
+  text-transform: capitalize;
 }
 
 .search_header {

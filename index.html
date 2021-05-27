@@ -12,150 +12,148 @@
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
       crossorigin="anonymous"
     />
- 
+
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
       href="https://fonts.googleapis.com/css2?family=Original+Surfer&display=swap"
       rel="stylesheet"
     />
-   <link rel="stylesheet" href="src/styles.css" />
+    <link rel="stylesheet" href="src/styles.css" />
     <title>Weather App</title>
   </head>
   <body>
     <div class="container">
-      <div class= "weatherContainer">
-      <div class="currentWeather">
-        <span id="current-day"></span> <span id="city"></span>
+      <div class="weatherContainer">
+        <ul class="currentWeather">
+          <li id="current-day"><span id="city"></span></li>
+          <li class="current-temperature">
+            <span id="now-temperature"></span>
+            <a href="celsiusLink" id="celsius"></a>
+            <span id="temperature-bar"></span>
+            <a href="fahrenheitLink" id="fahrenheit"></a>
+          </li>
+          <li id="current-weather"></li>
+          <li id="current-umidity"></li>
+          <li id="current-wind"></li>
+        </ul>
+        <div class="search_header">
+          <form id="search-form">
+            <input
+              type="text"
+              placeholder="Search for a city"
+              autofocus="on"
+              autocomplete="off"
+              id="search-input"
+            />
 
-        <div class="current-temperature">
-          <span id="now-temperature"></span>
-          <a href="celsiusLink" id="celsius"></a>
-          <span id="temperature-bar"></span>
-          <a href="fahrenheitLink" id="fahrenheit"></a>
+            <input type="submit" value="Search " class="search_buttom" />
+            <br />
+            <input type="reset" value="Reset your research " id="reset" />
+          </form>
+          <button id="search-currentPositionWeather">Current weather</button>
         </div>
 
-        <div id="current-weather"></div>
-        <div id="current-umidity"></div>
-        <div id="current-wind"></div>
-      </div>
+        <div class="today_temperature">
+          <div class="table-responsive">
+            <table class="table table-borderless">
+              <thead>
+                <tr>
+                  <th scope="col">8am</th>
+                  <th scope="col">11am</th>
+                  <th scope="col">2pm</th>
+                  <th scope="col">5pm</th>
+                  <th scope="col">8pm</th>
+                  <th scope="col">11pm</th>
+                  <th scope="col">2am</th>
+                  <th scope="col">5am</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">12°C</th>
+                  <td>15°C</td>
+                  <td>15°C</td>
+                  <td>15°C</td>
+                  <td>12°C</td>
+                  <td>13°C</td>
+                  <td>10°C</td>
+                  <td>10°C</td>
+                </tr>
 
-      <div class="search_header">
-        <form id="search-form">
-          <input
-            type="text"
-            placeholder="Search for a city"
-            autofocus="on"
-            autocomplete="off"
-            id="search-input"
-          />
+                <tr>
+                  <th scope="row">☀️</th>
+                  <td>☀️</td>
+                  <td>☀️</td>
+                  <td>🌥️</td>
+                  <td>🌧️</td>
+                  <td>🌧️</td>
+                  <td>🌧️</td>
+                  <td>🌫️</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
 
-          <input type="submit" value="Search " class="search_buttom" />
-         
-          </br>
-         
-          <input type="reset" value="Reset your research " id="reset" />
-        </form>
-        <button id="search-currentPositionWeather">Current weather</button>
+        <img src="images/season.svg" alt="season" width="20%" class="clock" />
 
-      </div>
-
-      <div class="today_temperature">
-        <div class="table-responsive">
+        <div class="forecast">
           <table class="table table-borderless">
             <thead>
               <tr>
-                <th scope="col">8am</th>
-                <th scope="col">11am</th>
-                <th scope="col">2pm</th>
-                <th scope="col">5pm</th>
-                <th scope="col">8pm</th>
-                <th scope="col">11pm</th>
-                <th scope="col">2am</th>
-                <th scope="col">5am</th>
+                <th scope="col"></th>
+                <th scope="col"></th>
+                <th scope="col">Max</th>
+                <th scope="col">Min</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <th scope="row">12°C</th>
-                <td>15°C</td>
-                <td>15°C</td>
-                <td>15°C</td>
-                <td>12°C</td>
-                <td>13°C</td>
-                <td>10°C</td>
-                <td>10°C</td>
+                <th scope="row">Friday</th>
+                <td>☀️</td>
+                <td class="max_temperature">15°C</td>
+                <td class="min_temperature">3°C</td>
               </tr>
 
               <tr>
-                <th scope="row">☀️</th>
-                <td>☀️</td>
-                <td>☀️</td>
+                <th scope="row">Saturday</th>
+                <td>🌧️</td>
+                <td class="max_temperature">12°C</td>
+                <td class="min_temperature">4°C</td>
+              </tr>
+
+              <tr>
+                <th scope="row">Sunday</th>
                 <td>🌥️</td>
-                <td>🌧️</td>
-                <td>🌧️</td>
-                <td>🌧️</td>
+                <td class="max_temperature">10°C</td>
+                <td class="min_temperature">2°C</td>
+              </tr>
+
+              <tr>
+                <th scope="row">Monday</th>
                 <td>🌫️</td>
+                <td class="max_temperature">10°C</td>
+                <td class="min_temperature">3°C</td>
+              </tr>
+
+              <tr>
+                <th scope="row">Tuesday</th>
+                <td>☀️</td>
+                <td class="max_temperature">13°C</td>
+                <td class="min_temperature">4°C</td>
               </tr>
             </tbody>
           </table>
         </div>
+
+        <a
+          href="https://github.com/SilviaDam91/my-weather-app"
+          target="_blank"
+          id="gitLink"
+        >
+          Open-source code </a
+        ><span>by Silvia Pariota</span>
       </div>
-
-      <img src="images/season.svg" alt="season" width="20%" class="clock" />
-
-      <div class="forecast">
-        <table class="table table-borderless">
-          <thead>
-            <tr>
-              <th scope="col"></th>
-              <th scope="col"></th>
-              <th scope="col">Max</th>
-              <th scope="col">Min</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th scope="row">Friday</th>
-              <td>☀️</td>
-              <td class="max_temperature">15°C</td>
-              <td class="min_temperature">3°C</td>
-            </tr>
-
-            <tr>
-              <th scope="row">Saturday</th>
-              <td>🌧️</td>
-              <td class="max_temperature">12°C</td>
-              <td class="min_temperature">4°C</td>
-            </tr>
-
-            <tr>
-              <th scope="row">Sunday</th>
-              <td>🌥️</td>
-              <td class="max_temperature">10°C</td>
-              <td class="min_temperature">2°C</td>
-            </tr>
-
-            <tr>
-              <th scope="row">Monday</th>
-              <td>🌫️</td>
-              <td class="max_temperature">10°C</td>
-              <td class="min_temperature">3°C</td>
-            </tr>
-
-            <tr>
-              <th scope="row">Tuesday</th>
-              <td>☀️</td>
-              <td class="max_temperature">13°C</td>
-              <td class="min_temperature">4°C</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
-      
-      <a href="https://github.com/SilviaDam91/my-weather-app"  target="_blank" id= "gitLink"> Open-source code </a><span>by Silvia Pariota</span>
-
-</div>
     </div>
     <script src="src/index.js"></script>
   </body>

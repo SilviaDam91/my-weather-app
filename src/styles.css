@@ -2,6 +2,11 @@ h1 {
   color: red;
 }
 
+li {
+  list-style: none;
+  padding: 0;
+}
+
 #now-temperature {
   font-size: 60px;
 }

@@ -12,7 +12,7 @@ li {
 }
 
 #icon {
-  display: inline;
+  vertical-align: top;
 }
 
 #now-temperature {

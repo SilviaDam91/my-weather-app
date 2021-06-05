@@ -75,7 +75,7 @@ function getTimeDate(date) {
 
   let dayToday = days[currentDate.getDay()];
 
-  return `${dayToday} ${hoursToday}:${minutesToday} `;
+  return `${dayToday} ${hoursToday}:${minutesToday}`;
 }
 
 function showWeather(response) {

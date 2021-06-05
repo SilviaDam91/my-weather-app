@@ -105,52 +105,20 @@
         <img src="images/season.svg" alt="season" width="20%" class="clock" />
 
         <div class="forecast">
-          <table class="table table-borderless">
-            <thead>
-              <tr>
-                <th scope="col"></th>
-                <th scope="col"></th>
-                <th scope="col">Max</th>
-                <th scope="col">Min</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th scope="row">Friday</th>
-                <td>☀️</td>
-                <td class="max_temperature">15°C</td>
-                <td class="min_temperature">3°C</td>
-              </tr>
-
-              <tr>
-                <th scope="row">Saturday</th>
-                <td>🌧️</td>
-                <td class="max_temperature">12°C</td>
-                <td class="min_temperature">4°C</td>
-              </tr>
-
-              <tr>
-                <th scope="row">Sunday</th>
-                <td>🌥️</td>
-                <td class="max_temperature">10°C</td>
-                <td class="min_temperature">2°C</td>
-              </tr>
-
-              <tr>
-                <th scope="row">Monday</th>
-                <td>🌫️</td>
-                <td class="max_temperature">10°C</td>
-                <td class="min_temperature">3°C</td>
-              </tr>
-
-              <tr>
-                <th scope="row">Tuesday</th>
-                <td>☀️</td>
-                <td class="max_temperature">13°C</td>
-                <td class="min_temperature">4°C</td>
-              </tr>
-            </tbody>
-          </table>
+          <div class="row">
+            <div class="col-2">
+              <div class="weather-forecast-date">Friday</div>
+              <img
+                src="http://openweathermap.org/img/wn/50d@2x.png"
+                alt=""
+                width="42"
+              />
+              <div class="weather-forecast-temperatures">
+                <span class="max_temperature"> 18° </span>
+                <span class="min_temperature"> 12° </span>
+              </div>
+            </div>
+          </div>
         </div>
 
         <a

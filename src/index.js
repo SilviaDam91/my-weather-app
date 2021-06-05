@@ -32,6 +32,8 @@ function displayTemperature(response) {
   precipitationElement.innerHTML = `Currently we have ${response.data.weather[0].description}`;
   umidityElement.innerHTML = `Humidity: ${response.data.main.humidity}%`;
   windElement.innerHTML = `Wind: ${response.data.wind.speed} km/h`;
+
+  getForecast(response.data.coord);
 }
 
 function handleSubmit(event) {
@@ -120,7 +122,14 @@ function displayCelsiusTemperature(event) {
   temperatureElement.innerHTML = celsiusTemperature;
 }
 
-function displayForecast() {
+function getForecast(coordinates) {
+  let oneCallApiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+  axios.get(oneCallApiUrl).then(displayForecast);
+}
+
+function displayForecast(response) {
+  console.log(response.data.daily);
+
   let forecastElement = document.querySelector("#forecast");
   let forecastHTML = `<div class="row">`;
   let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
@@ -156,5 +165,3 @@ defaultCity("Amsterdam");
 
 fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
 celsiusLink.addEventListener("click", displayCelsiusTemperature);
-
-displayForecast();

@@ -18,8 +18,7 @@ li {
 #now-temperature {
   font-size: 60px;
 }
-#celsius {
-  color: #212529;
+#celsius-link {
   font-size: 22px;
   padding-left: 6px;
   vertical-align: top;
@@ -27,8 +26,12 @@ li {
   line-height: 59px;
 }
 
-#fahrenheit {
+.active {
   color: #212529;
+  cursor: default;
+}
+
+#fahrenheit-link {
   font-size: 22px;
   padding-left: 6px;
   vertical-align: top;
@@ -89,6 +92,12 @@ li {
 .city {
   font-size: 20px;
   text-transform: capitalize;
+}
+
+.active:hover {
+  cursor: default;
+  text-decoration: none;
+  color: #212529;
 }
 
 .search_header {

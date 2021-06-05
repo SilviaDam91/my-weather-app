@@ -1,8 +1,9 @@
 let currentDate = new Date();
 let weekDay = document.querySelector("#current-day");
 let searchEngine = document.querySelector("#search-form");
-let nowCelsius = document.querySelector("#celsius");
-let nowFahrenheit = document.querySelector("#fahrenheit");
+let celsiusLink = document.querySelector("#celsius-link");
+let fahrenheitLink = document.querySelector("#fahrenheit-link");
+let celsiusTemperature = null;
 let apiKey = "968e9119f2237b959ae20b2dab5f8100";
 let currentWeatherButton = document.querySelector(
   "#search-currentPositionWeather"
@@ -16,8 +17,7 @@ let searchedInput = document.querySelector("#search-input");
 let resetButton = document.querySelector("#reset");
 let iconElement = document.querySelector("#icon");
 
-function showTemperature(response) {
-  let temperature = Math.round(response.data.main.temp);
+function displayTemperature(response) {
   iconElement.setAttribute(
     "src",
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
@@ -27,13 +27,14 @@ function showTemperature(response) {
     `http://openweathermap.org/img/wn/${response.data.weather[0].description}@2x.png`
   );
 
-  temperatureElement.innerHTML = `${temperature}°C`;
+  celsiusTemperature = Math.round(response.data.main.temp);
+  temperatureElement.innerHTML = `${celsiusTemperature}`;
   precipitationElement.innerHTML = `Currently we have ${response.data.weather[0].description}`;
   umidityElement.innerHTML = `Humidity: ${response.data.main.humidity}%`;
   windElement.innerHTML = `Wind: ${response.data.wind.speed} km/h`;
 }
 
-function getCurrentTemperatureonTypedCity(event) {
+function handleSubmit(event) {
   event.preventDefault();
 
   weekDay.innerHTML = `${getTimeDate(currentDate)}, in ${searchedInput.value}`;
@@ -41,7 +42,7 @@ function getCurrentTemperatureonTypedCity(event) {
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${searchedInput.value}&units=metric`;
   axios
     .get(`${apiUrl}&appid=${apiKey}`)
-    .then(showTemperature)
+    .then(displayTemperature)
     .catch(function (err) {
       weekDay.innerHTML = null;
       temperatureElement.innerHTML = null;
@@ -99,11 +100,30 @@ function clickRetrievePosition() {
 
 function defaultCity(city) {
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric`;
-  axios.get(`${apiUrl}&appid=${apiKey}`).then(showTemperature);
+  axios.get(`${apiUrl}&appid=${apiKey}`).then(displayTemperature);
   weekDay.innerHTML = `${getTimeDate(currentDate)}, in ${city}`;
 }
 
+function displayFahrenheitTemperature(event) {
+  event.preventDefault();
+  celsiusLink.classList.remove("active");
+  fahrenheitLink.classList.add("active");
+  let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
+  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
+}
+
+function displayCelsiusTemperature(event) {
+  event.preventDefault();
+  celsiusLink.classList.add("active");
+  fahrenheitLink.classList.remove("active");
+
+  temperatureElement.innerHTML = celsiusTemperature;
+}
+
 currentWeatherButton.addEventListener("click", clickRetrievePosition);
-searchEngine.addEventListener("submit", getCurrentTemperatureonTypedCity);
+searchEngine.addEventListener("submit", handleSubmit);
 
 defaultCity("Amsterdam");
+
+fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
+celsiusLink.addEventListener("click", displayCelsiusTemperature);

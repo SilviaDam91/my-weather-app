@@ -30,21 +30,22 @@
           <li class="current-temperature">
             <img src="" alt="Clear" id="icon" />
             <span id="now-temperature"></span>
-            <a href="celsiusLink" id="celsius"></a>
+            <a href="celsiusLink" id="celsius-link" class="active">°C</a>
 
-            <span id="temperature-bar"></span>
+            <span id="temperature-bar">|</span>
 
-            <a href="fahrenheitLink" id="fahrenheit"></a>
+            <a href="fahrenheitLink" id="fahrenheit-link">°F</a>
           </li>
 
           <li id="current-weather"></li>
           <li id="current-umidity"></li>
           <li id="current-wind"></li>
         </ul>
+
         <div class="search_header">
           <form id="search-form">
             <input
-              type="text"
+              type="search"
               placeholder="Search for a city"
               autofocus="on"
               autocomplete="off"
@@ -55,6 +56,7 @@
             <br />
             <input type="reset" value="Reset your research " id="reset" />
           </form>
+
           <button id="search-currentPositionWeather">Current weather</button>
         </div>
 

@@ -126,6 +126,7 @@ li {
 
 .today_temperature {
   font-weight: 900;
+  font-size: 12px;
   margin-bottom: 30px;
   text-align: center;
   font-size-adjust: none;

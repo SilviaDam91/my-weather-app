@@ -128,11 +128,11 @@ function getForecast(coordinates) {
 }
 
 function displayForecast(response) {
-  console.log(response.data.daily);
+  le;
 
   let forecastElement = document.querySelector("#forecast");
   let forecastHTML = `<div class="row">`;
-  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  ///let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 
   days.forEach(function (day) {
     forecastHTML =

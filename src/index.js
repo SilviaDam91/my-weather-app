@@ -14,7 +14,6 @@ let umidityElement = document.querySelector("#current-umidity");
 let windElement = document.querySelector("#current-wind");
 let searchedCity = document.querySelector("#city");
 let searchedInput = document.querySelector("#search-input");
-let resetButton = document.querySelector("#reset");
 let iconElement = document.querySelector("#icon");
 
 function displayTemperature(response) {

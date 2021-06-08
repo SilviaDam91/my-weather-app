@@ -50,6 +50,7 @@ function handleSubmit(event) {
       precipitationElement.innerHTML = null;
       umidityElement.innerHTML = null;
       windElement.innerHTML = null;
+      iconElement.innerHTML = null;
       alert("Please, type a valid city.");
     });
 }
@@ -198,9 +199,7 @@ function displayHourlyForecast(response) {
         forecastHourlyHTML +
         `
             <div class="col-2">
-              <div class="weather-forecast-date">${formatHourlyForecast(
-                forecastDay.dt
-              )}</div>
+              <span>${formatHourlyForecast(forecastDay.dt)} </span>
               <img
                 src="http://openweathermap.org/img/wn/${
                   forecastDay.weather[0].icon
@@ -208,8 +207,8 @@ function displayHourlyForecast(response) {
                 alt=""
                 width="42"
               />
-              <div class="weather-forecast-temperatures">
-                <span> ${Math.round(forecastDay.temp)}° </span>
+              <div>
+                <strong> ${Math.round(forecastDay.temp)}° </strong>
                     </div>
             </div>
           `;
@@ -227,4 +226,3 @@ fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
 celsiusLink.addEventListener("click", displayCelsiusTemperature);
 
 defaultCity("Amsterdam");
-getForecast();

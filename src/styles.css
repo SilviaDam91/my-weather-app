@@ -107,7 +107,7 @@ li {
 .currentWeather {
   text-align: center;
   font-weight: 900;
-  padding: 42px 26px;
+  padding: 0;
 }
 
 .search_buttom {

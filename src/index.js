@@ -85,6 +85,15 @@ function getTimeDate(date) {
 function showWeather(response) {
   window.scrollTo(0, 0);
 
+  iconElement.setAttribute(
+    "src",
+    `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+  iconElement.setAttribute(
+    "alt",
+    `https://openweathermap.org/img/wn/${response.data.weather[0].description}@2x.png`
+  );
+
   let currentTemperatureInCurrentLocation = Math.round(response.data.main.temp);
   weekDay.innerHTML = `${getTimeDate(currentDate)}, in ${response.data.name}, ${
     response.data.sys.country

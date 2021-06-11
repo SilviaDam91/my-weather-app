@@ -102,6 +102,7 @@ function showWeather(response) {
   precipitationElement.innerHTML = `Currently we have ${response.data.weather[0].description}`;
   umidityElement.innerHTML = `Humidity: ${response.data.main.humidity}%`;
   windElement.innerHTML = `Wind: ${response.data.wind.speed} km/h`;
+  getForecast(response.data.coord);
 }
 
 function retrievePosition(position) {

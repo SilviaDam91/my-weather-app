@@ -21,11 +21,11 @@ function displayTemperature(response) {
 
   iconElement.setAttribute(
     "src",
-    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+    `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
   iconElement.setAttribute(
     "alt",
-    `http://openweathermap.org/img/wn/${response.data.weather[0].description}@2x.png`
+    `https://openweathermap.org/img/wn/${response.data.weather[0].description}@2x.png`
   );
 
   celsiusTemperature = Math.round(response.data.main.temp);

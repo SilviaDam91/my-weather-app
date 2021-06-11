@@ -17,6 +17,8 @@ let searchedInput = document.querySelector("#search-input");
 let iconElement = document.querySelector("#icon");
 
 function displayTemperature(response) {
+  window.scrollTo(0, 0);
+
   iconElement.setAttribute(
     "src",
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
@@ -81,6 +83,8 @@ function getTimeDate(date) {
 }
 
 function showWeather(response) {
+  window.scrollTo(0, 0);
+
   let currentTemperatureInCurrentLocation = Math.round(response.data.main.temp);
   weekDay.innerHTML = `${getTimeDate(currentDate)}, in ${response.data.name}, ${
     response.data.sys.country
